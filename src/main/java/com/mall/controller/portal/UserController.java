@@ -92,6 +92,7 @@ public class UserController {
         }
         return response;
     }
+    //获取个人详细信息
     @RequestMapping(value="get_information.do" ,method= RequestMethod.POST)
     @ResponseBody
     public ServerResponse<User> get_information(HttpSession session) {

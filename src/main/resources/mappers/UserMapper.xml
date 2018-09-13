@@ -156,11 +156,11 @@
     set password=#{passwordNew},update_time=now()
     where username=#{username}
   </update>
-  <select id="checkUsername"  resultType="int" parameterType="String">
+  <select id="checkUsername" resultType="java.lang.Integer" parameterType="String">
     select COUNT(1) FROM mmall_user
     where username=#{mmall_user,jdbcType=VARCHAR}
   </select>
-  <select id="checkEmail"  resultType="int" parameterType="String">
+  <select id="checkEmail" resultType="java.lang.Integer" parameterType="String">
     select COUNT(1) FROM mmall_user
     where email=#{email,jdbcType=VARCHAR}
   </select>
